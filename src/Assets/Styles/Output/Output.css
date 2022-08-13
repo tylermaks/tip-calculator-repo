@@ -1,0 +1,39 @@
+.output-section {
+  background-color: #00494d;
+  border-radius: 15px;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.tip-output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.amount {
+  color: #fff;
+  margin: 0;
+}
+
+.per-person {
+  font-size: 14px;
+}
+
+.reset-btn {
+  background-color: #26c0ab;
+  border: none;
+  border-radius: 5px;
+  color: #00494d;
+  cursor: pointer;
+  font-family: "Space Mono", sans-serif;
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+/*# sourceMappingURL=Output.css.map */

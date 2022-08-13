@@ -1,0 +1,38 @@
+//VARIABLES
+$cyan: hsl(172, 67%, 45%);
+$dkCyan: hsl(183, 100%, 15%);
+
+.output-section{ 
+    background-color: $dkCyan;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    width:100%;
+}
+
+.tip-output{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.amount{
+    color: #fff;
+    margin: 0;
+}
+
+.per-person{
+    font-size: 14px;
+}
+
+.reset-btn{
+    background-color: $cyan;
+    border: none;
+    border-radius: 5px;
+    color: $dkCyan;
+    cursor: pointer;
+    font-family: "Space Mono", sans-serif;
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
