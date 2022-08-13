@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.input-section {
+  padding: 1.5rem;
+}
+
 .percentage-container {
   margin: 1rem 0;
 }
@@ -42,5 +46,29 @@
 .percentage--input {
   background-color: #f4fafa;
   color: #7f9c9f;
+}
+
+@media screen and (min-width: 1000px) {
+  .calc-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-radius: 15px;
+    margin-bottom: 4rem;
+    width: 80%;
+  }
+  .input-section {
+    min-height: 350px;
+    width: 47.5%;
+  }
+  .percentage-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 /*# sourceMappingURL=Calculator.css.map */

@@ -33,6 +33,19 @@ $dkCyan: hsl(183, 100%, 15%);
     cursor: pointer;
     font-family: "Space Mono", sans-serif;
     font-size: 24px;
-    margin-bottom: 1.5rem;
     width: 100%;
+}
+
+//++++++++++++++++++++
+//++++DESKTOP VIEW++++
+//++++++++++++++++++++
+@media screen and (min-width:1000px) {
+    .output-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin: 0;
+        width:47.5%;
+    }
 }

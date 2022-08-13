@@ -16,6 +16,10 @@ $mdGray: hsl(184, 14%, 56%);
     width: 100%;
 }
 
+.input-section{
+    padding: 1.5rem;
+}
+
 .percentage-container{
     margin: 1rem 0;
 }
@@ -45,3 +49,31 @@ $mdGray: hsl(184, 14%, 56%);
         color:$mdGray;
     }
 }
+
+//++++++++++++++++++++
+//++++DESKTOP VIEW++++
+//++++++++++++++++++++
+@media screen and (min-width: 1000px) {
+    .calc-container{
+        display: flex;
+        justify-content: space-between;
+        
+        border-radius: 15px;
+        margin-bottom: 4rem;
+
+        width: 80%;
+    }
+
+    .input-section{ 
+        min-height: 350px;
+        width: 47.5%;
+    }
+
+    .percentage-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+
+
