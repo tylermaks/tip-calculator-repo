@@ -48,6 +48,10 @@ $mdGray: hsl(184, 14%, 56%);
         background-color: $offWhite;
         color:$mdGray;
     }
+
+    &--active{
+        background-color: $cyan;
+    }
 }
 
 //++++++++++++++++++++

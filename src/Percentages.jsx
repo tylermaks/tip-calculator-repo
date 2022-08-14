@@ -2,18 +2,23 @@ import React from "react"
 
 import "./Assets/Styles/Calculator/Calculator.css"
 
-function Percentages() {
+function Percentages(props) {
 
     const percentages = [5, 10, 15, 25, 50]
+
+    
 
     return(
         <div className="percentage-container">
              <span>Select Tip %</span>
-             <div className="percentage-grid">
+             <div  className="percentage-grid">
                 {
                     percentages.map(item => {
+
+                        const active = props.percentage === String(item) ? "percentage percentage--active" : "percentage"
+
                         return(
-                            <div className="percentage">
+                            <div id={item} onClick={props.onClick} className={active}>
                                 {item}%
                             </div>
                         )

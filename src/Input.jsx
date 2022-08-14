@@ -1,11 +1,16 @@
-import React from "react"
+import React, {useState} from "react"
 
 import Percentages from "./Percentages"
 
 function Input(props){
 
-    const checkError =  props.billAmount > 0 ? "Must be a number" : null
+    const [isEmpty, setIsEmpty] = useState(0)
+    const checkEmpty = (e) =>{ 
+        setIsEmpty(e.target.value)
+    }
 
+    const checkError =  (props.billAmount > 0 && isEmpty <= 0) ? "Cannot be blank" : null
+   
     return(
         <div className="input-section">
             <div className="input-container">
@@ -17,11 +22,14 @@ function Input(props){
                         name="bill"
                         pattern="^[0-9]*$"
                         placeholder="0"
-                        onFocusOut={props.onFocusOut}
+                        onBlur={props.onBlur}
                     />
                 </div>
                 
-                <Percentages />
+                <Percentages 
+                    onClick={props.onClick}
+                    percentage={props.percentage}
+                />
 
                 <div>
                     <label htmlFor="people">Number of People</label>
@@ -32,6 +40,7 @@ function Input(props){
                         name="people"  
                         pattern="^[0-9]*$"
                         placeholder="0"
+                        onBlur={checkEmpty}
                     />
                 </div>
             </div>

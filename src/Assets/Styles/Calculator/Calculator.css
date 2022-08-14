@@ -48,6 +48,10 @@
   color: #7f9c9f;
 }
 
+.percentage--active {
+  background-color: #26c0ab;
+}
+
 @media screen and (min-width: 1000px) {
   .calc-container {
     display: -webkit-box;
