@@ -34,6 +34,10 @@ $dkCyan: hsl(183, 100%, 15%);
     font-family: "Space Mono", sans-serif;
     font-size: 24px;
     width: 100%;
+
+    &:hover{
+        background-color: hsl(172, 67%, 55%);
+    }
 }
 
 //++++++++++++++++++++

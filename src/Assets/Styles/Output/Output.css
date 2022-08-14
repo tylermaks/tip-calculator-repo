@@ -36,6 +36,10 @@
   width: 100%;
 }
 
+.reset-btn:hover {
+  background-color: #3fd9c5;
+}
+
 @media screen and (min-width: 1000px) {
   .output-section {
     display: -webkit-box;

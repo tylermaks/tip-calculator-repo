@@ -71,4 +71,18 @@
         grid-template-rows: 1fr 1fr;
   }
 }
+
+#bill {
+  background: url(../../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
+  background-color: #f4fafa;
+}
+
+#people {
+  background: url(../../images/icon-person.svg) no-repeat scroll 1rem 1rem;
+  background-color: #f4fafa;
+}
+
+.error {
+  color: red;
+}
 /*# sourceMappingURL=Calculator.css.map */

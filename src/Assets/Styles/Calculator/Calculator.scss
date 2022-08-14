@@ -75,5 +75,18 @@ $mdGray: hsl(184, 14%, 56%);
     }
 }
 
+#bill{
+    background: url(../../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
+    background-color: $offWhite;
+}
+
+#people{
+    background: url(../../images/icon-person.svg) no-repeat scroll 1rem 1rem;
+    background-color: $offWhite;
+}
+
+.error{
+    color: red;
+}
 
 
