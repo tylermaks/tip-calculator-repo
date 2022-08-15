@@ -47,7 +47,7 @@ function Calculator(){
                 billAmount={billAmount}
                 percentage={percentage}
                 people={people}
-                onClick={resetAll}
+                resetAll={resetAll}
             />
         </section>
     )

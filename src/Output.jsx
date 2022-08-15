@@ -5,9 +5,9 @@ import "./Assets/Styles/Output/Output.css"
 function Output(props) {
 
     const tipOutput = ["Tip Amount", "Total"]
-
-    const getTip = (props.billAmount && props.people) > 0 ? (props.billAmount * (props.percentage/100)/props.people).toFixed(2) : "0.00"
-    const getTotal = (props.billAmount && props.people) > 0 ? ((props.billAmount * (1 + props.percentage/100))/props.people).toFixed(2) : "0.00"
+   
+    const getTip = (props.billAmount && props.people > 0) ? (props.billAmount * (props.percentage/100)/props.people).toFixed(2) : "0.00"
+    const getTotal = (props.billAmount && props.people > 0) ? ((props.billAmount * (1 + props.percentage/100))/props.people).toFixed(2) : "0.00"
 
 
     return(
@@ -32,7 +32,7 @@ function Output(props) {
                     })
                 } 
             </div>
-            <button form="tipsCalc" type="reset" onClick={props.onClick} className="reset-btn">Reset</button>
+            <button form="tipsCalc" type="reset" onClick={props.resetAll} className="reset-btn">Reset</button>
         </div>
     )
 }

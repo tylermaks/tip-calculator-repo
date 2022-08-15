@@ -23,7 +23,7 @@ function Percentages(props) {
                     })
                 }
                 
-                <input id={props.percentage} onClick={props.getPercentage} onChange={props.getCustom} className="percentage percentage--input" type="text" name="percentage--input" placeholder="Custom"/>
+                <input id={props.percentage} onClick={props.getCustom} onChange={props.getCustom} className="percentage percentage--input" type="text" name="percentage--input" placeholder="Custom"/>
              </div>
 
         </div>

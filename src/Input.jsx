@@ -16,8 +16,9 @@ function Input(props){
                         id="bill" 
                         type="number" 
                         name="bill"
-                        pattern="^[0-9]*$"
                         placeholder="0"
+                        step=".01"
+                        min="1"
                         onBlur={props.onBlur}
                     />
                 </div>
