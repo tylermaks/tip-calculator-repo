@@ -1,0 +1,64 @@
+$cyan: hsl(172, 67%, 45%);
+$dkCyan: hsl(183, 100%, 15%);
+$offWhite: hsl(189, 41%, 97%);
+$mdGray: hsl(184, 14%, 56%);
+
+
+//+++++++++++++++++++
+//++++MOBILE VIEW++++
+//+++++++++++++++++++
+#bill{
+    background: url(../../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
+    background-color: $offWhite;
+}
+
+#people{
+    background: url(../../images/icon-person.svg) no-repeat scroll 1rem 1rem;
+    background-color: $offWhite;
+}
+
+.percentage-container{
+    margin: 1rem 0;
+}
+
+.percentage-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1.5rem
+}
+
+.percentage{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $dkCyan;
+    border-radius: 5px;
+    color: $offWhite;
+    cursor: pointer;
+    font-size: 24px;
+    height: 50px;
+    width:100%;
+
+    &--input{ 
+        background-color: $offWhite;
+        color:$mdGray;
+    }
+
+    &--active{
+        background-color: $cyan;
+    }
+}
+
+
+
+//++++++++++++++++++++
+//++++DESKTOP VIEW++++
+//++++++++++++++++++++
+@media screen and (min-width: 1000px) {
+    .percentage-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

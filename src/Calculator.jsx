@@ -7,25 +7,48 @@ import './Assets/Styles/Calculator/Calculator.css'
 function Calculator(){
 
     const [billAmount, setBillAmount] = useState(0)
-    const [percentage, setPercentage] = useState("15")
+    const [people, setPeople] = useState(0)
+    const [percentage, setPercentage] = useState(15)
+    
+    const getPeople = (e) =>{ 
+        setPeople(e.target.value)
+    }
 
-    const handleChange = (e) =>{
+    const getBillAmount = (e) =>{
         setBillAmount(e.target.value)
     }
 
-    const handleClick = (e) => {
-        setPercentage(e.target.id)
+    const getPercentage = (e) => {
+        setPercentage(Number(e.target.id))
+    }
+
+    const getCustom = (e) => {
+        setPercentage(e.target.value)
+    }
+
+    const resetAll = () => {
+        setBillAmount(0)
+        setPeople(0)
+        setPercentage(15)
     }
 
     return(
         <section className="calc-container">
             <Input 
-                onBlur={handleChange}
+                onBlur={getBillAmount}
                 billAmount={billAmount}
-                onClick={handleClick}
+                getPercentage={getPercentage}
                 percentage={percentage}
+                people={people}
+                getPeople={getPeople}
+                getCustom={getCustom}
             />
-            <Output />
+            <Output 
+                billAmount={billAmount}
+                percentage={percentage}
+                people={people}
+                onClick={resetAll}
+            />
         </section>
     )
 }

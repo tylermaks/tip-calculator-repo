@@ -1,19 +1,15 @@
-import React, {useState} from "react"
-
+import React from "react"
 import Percentages from "./Percentages"
+
+import "./Assets/Styles/Input/Input.css"
 
 function Input(props){
 
-    const [isEmpty, setIsEmpty] = useState(0)
-    const checkEmpty = (e) =>{ 
-        setIsEmpty(e.target.value)
-    }
-
-    const checkError =  (props.billAmount > 0 && isEmpty <= 0) ? "Cannot be blank" : null
+    const checkError =  (props.billAmount > 0 && props.people <= 0) ? "Cannot be blank" : null
    
     return(
         <div className="input-section">
-            <div className="input-container">
+            <form id="tipsCalc" className="input-container">
                 <div>
                     <label htmlFor="bill">Bill</label>
                     <input 
@@ -27,8 +23,9 @@ function Input(props){
                 </div>
                 
                 <Percentages 
-                    onClick={props.onClick}
+                    getPercentage={props.getPercentage}
                     percentage={props.percentage}
+                    getCustom={props.getCustom}
                 />
 
                 <div>
@@ -40,10 +37,10 @@ function Input(props){
                         name="people"  
                         pattern="^[0-9]*$"
                         placeholder="0"
-                        onBlur={checkEmpty}
+                        onBlur={props.getPeople}
                     />
                 </div>
-            </div>
+            </form>
         </div>
     )
 }

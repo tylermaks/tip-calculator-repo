@@ -16,43 +16,11 @@ $mdGray: hsl(184, 14%, 56%);
     width: 100%;
 }
 
-.input-section{
-    padding: 1.5rem;
+.error{
+    color: red;
 }
 
-.percentage-container{
-    margin: 1rem 0;
-}
 
-.percentage-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 1.5rem
-}
-
-.percentage{ 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background-color: $dkCyan;
-    border-radius: 5px;
-    color: $offWhite;
-    cursor: pointer;
-    font-size: 24px;
-    height: 50px;
-    width:100%;
-
-    &--input{ 
-        background-color: $offWhite;
-        color:$mdGray;
-    }
-
-    &--active{
-        background-color: $cyan;
-    }
-}
 
 //++++++++++++++++++++
 //++++DESKTOP VIEW++++
@@ -67,30 +35,10 @@ $mdGray: hsl(184, 14%, 56%);
 
         width: 80%;
     }
-
-    .input-section{ 
-        min-height: 350px;
-        width: 47.5%;
-    }
-
-    .percentage-grid{
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
 }
 
-#bill{
-    background: url(../../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
-    background-color: $offWhite;
-}
 
-#people{
-    background: url(../../images/icon-person.svg) no-repeat scroll 1rem 1rem;
-    background-color: $offWhite;
-}
 
-.error{
-    color: red;
-}
+
 
 

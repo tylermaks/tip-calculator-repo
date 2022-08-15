@@ -1,12 +1,10 @@
 import React from "react"
 
-import "./Assets/Styles/Calculator/Calculator.css"
+import "./Assets/Styles/Percentage/Percentage.css"
 
 function Percentages(props) {
 
     const percentages = [5, 10, 15, 25, 50]
-
-    
 
     return(
         <div className="percentage-container">
@@ -15,17 +13,17 @@ function Percentages(props) {
                 {
                     percentages.map(item => {
 
-                        const active = props.percentage === String(item) ? "percentage percentage--active" : "percentage"
+                        const active = props.percentage === item ? "percentage percentage--active" : "percentage"
 
                         return(
-                            <div id={item} onClick={props.onClick} className={active}>
+                            <div id={item} onClick={props.getPercentage} className={active}>
                                 {item}%
                             </div>
                         )
                     })
                 }
                 
-                <input className="percentage percentage--input" type="text" name="percentage--input" placeholder="Custom"/>
+                <input id={props.percentage} onClick={props.getPercentage} onChange={props.getCustom} className="percentage percentage--input" type="text" name="percentage--input" placeholder="Custom"/>
              </div>
 
         </div>

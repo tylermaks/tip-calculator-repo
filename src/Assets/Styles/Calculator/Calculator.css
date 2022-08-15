@@ -6,50 +6,8 @@
   width: 100%;
 }
 
-.input-section {
-  padding: 1.5rem;
-}
-
-.percentage-container {
-  margin: 1rem 0;
-}
-
-.percentage-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 1.5rem;
-}
-
-.percentage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #00494d;
-  border-radius: 5px;
-  color: #f4fafa;
-  cursor: pointer;
-  font-size: 24px;
-  height: 50px;
-  width: 100%;
-}
-
-.percentage--input {
-  background-color: #f4fafa;
-  color: #7f9c9f;
-}
-
-.percentage--active {
-  background-color: #26c0ab;
+.error {
+  color: red;
 }
 
 @media screen and (min-width: 1000px) {
@@ -64,29 +22,5 @@
     margin-bottom: 4rem;
     width: 80%;
   }
-  .input-section {
-    min-height: 350px;
-    width: 47.5%;
-  }
-  .percentage-grid {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-  }
-}
-
-#bill {
-  background: url(../../images/icon-dollar.svg) no-repeat scroll 1rem 1rem;
-  background-color: #f4fafa;
-}
-
-#people {
-  background: url(../../images/icon-person.svg) no-repeat scroll 1rem 1rem;
-  background-color: #f4fafa;
-}
-
-.error {
-  color: red;
 }
 /*# sourceMappingURL=Calculator.css.map */
