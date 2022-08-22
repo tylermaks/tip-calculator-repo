@@ -1,14 +1,13 @@
 import React from "react"
 
 import "./Assets/Styles/Output/Output.css"
+import {getTip, getTotal} from "./OutputData"
 
-function Output(props) {
+function Output({billAmount, people, percentage, ...props}) {
 
     const tipOutput = ["Tip Amount", "Total"]
-   
-    const getTip = (props.billAmount && props.people > 0) ? (props.billAmount * (props.percentage/100)/props.people).toFixed(2) : "0.00"
-    const getTotal = (props.billAmount && props.people > 0) ? ((props.billAmount * (1 + props.percentage/100))/props.people).toFixed(2) : "0.00"
-
+    const Tip = getTip(billAmount, people, percentage);
+    const Total = getTotal(billAmount, people, percentage);
 
     return(
         <div className="output-section">
@@ -16,7 +15,7 @@ function Output(props) {
                 {
                     tipOutput.map(item => {
 
-                        const mapAmount = item === "Tip Amount" ? getTip : getTotal;
+                        const mapAmount = item === "Tip Amount" ? Tip : Total;
 
                         return(
                             <div className="tip-output">
